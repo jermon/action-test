@@ -23,7 +23,10 @@ jobs:
 
     - name: pwd_ls
       run: |
+        cd $GOPATH
         pwd
+        ls
+        cd src
         ls
         
     - name: Go env GOPATH
