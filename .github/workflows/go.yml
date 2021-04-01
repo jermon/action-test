@@ -22,9 +22,8 @@ jobs:
 
     - name: setup GOPATH dir
       run: |
-        env
-        mkdir -p /home/runner/go/src
-        ln -s $GITHUB_WORKSPACE /home/runner/go/src/
+        mkdir -p $HOME/go/src
+        ln -s $GITHUB_WORKSPACE $HOME/go/src/
         
     - name: Build
       run: go build -v ./...
