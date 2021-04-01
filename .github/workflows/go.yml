@@ -26,7 +26,7 @@ jobs:
         ln -s $GITHUB_WORKSPACE $HOME/go/src/
         
     - name: Build
-      run: go build -v main.go -o MAIN
+      run: go build -v main.go 
 
     - name: ls
       run: ls
