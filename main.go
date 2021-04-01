@@ -2,7 +2,7 @@ package main
 
 import(
   "fmt"
-  c "action-test/combinatorics"
+  c "/combinatorics"
 )
 
 func main() {
