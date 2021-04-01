@@ -28,8 +28,11 @@ jobs:
     - name: Build
       run: go build -v main.go 
 
-    - name: ls
-      run: ls
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: main
+        path: main
         
     - name: Test
       run: go test -v ./...
