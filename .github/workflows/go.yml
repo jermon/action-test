@@ -17,14 +17,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        path: go/src
+        path: src
 
     - name: pwd_ls
       run: |
         pwd
-        ls
-        ls go
-        ls go/src
+        ls src
         
     - name: Set up Go
       uses: actions/setup-go@v2
