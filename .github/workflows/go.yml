@@ -20,6 +20,12 @@ jobs:
 
     - name: Build
       run: go build -v ./...
+    
+    - name: pwd_ls
+      run: |
+        pwd
+        ls
+        
 
     - name: Test
       run: go test -v ./...
