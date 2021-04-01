@@ -33,13 +33,14 @@ jobs:
         mkdir -p /home/runner/go/src
         ln -s $GITHUB_WORKSPACE /home/runner/go/src/
         ls /home/runner/go/src
+        ls /home/runner/go/src/action-test
         
     - name: Go env GOPATH
       run: go env GOPATH
 
     - name: Build
       run: |
-        export GOPATH=GITHUB_WORKSPACEgo
+        export GOPATH=GITHUB_WORKSPACE/go
         go build -v ./...
 
     - name: Test
