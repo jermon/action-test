@@ -28,7 +28,7 @@ jobs:
 
     - name: Build
       run: |
-        export GOPATH=$HOME/runner/work
+        export GOPATH=$HOME/work
         go build -v ./...
 
     - name: Test
