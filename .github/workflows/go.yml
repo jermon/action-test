@@ -19,9 +19,8 @@ jobs:
       #with:
       #  path: src
 
-    - name: pwd_ls
-      run: |
-        pwd
+    - name: pwd
+      run: pwd
         
     - name: Set up Go
       uses: actions/setup-go@v2
@@ -40,7 +39,7 @@ jobs:
 
     - name: Build
       run: |
-        export GOPATH=GITHUB_WORKSPACE/go
+        export GOPATH=/home/runner/go
         go build -v ./...
 
     - name: Test
