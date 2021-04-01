@@ -32,7 +32,7 @@ jobs:
       run: |
         mkdir -p /home/runner/go/src
         ln -s $GITHUB_WORKSPACE /home/runner/go/src/
-        ls $GOPATH/src
+        ls /home/runner/go/src
         
     - name: Go env GOPATH
       run: go env GOPATH
