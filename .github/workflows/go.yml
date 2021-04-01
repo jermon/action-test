@@ -30,8 +30,8 @@ jobs:
 
     - name: pwd_ls
       run: |
-        mkdir -p $GOPATH/src
-        ln -s $GITHUB_WORKSPACE $GOPATH/src 
+        mkdir -p /home/runner/go/src
+        ln -s $GITHUB_WORKSPACE /home/runner/go/src/
         ls $GOPATH/src
         
     - name: Go env GOPATH
