@@ -23,8 +23,8 @@ jobs:
         pwd
         ls
         
-    - name: Go env
-      run: go env
+    - name: Go env GOPATH
+      run: go env GOPATH
 
     - name: Build
       run: go build -v ./...
