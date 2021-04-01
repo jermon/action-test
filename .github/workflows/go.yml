@@ -14,7 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        path: go
+        path: go/src
 
     - name: Set up Go
       uses: actions/setup-go@v2
