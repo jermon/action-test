@@ -27,7 +27,7 @@ jobs:
 
     - name: Build
       run: go build -v ./...
-      # cmd/main/main.go 
+      # cmd/main/main.go
 
     - name: Upload
       uses: actions/upload-artifact@v2
@@ -37,3 +37,6 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+
+    - name: Bench
+      run: go test -bench ./...

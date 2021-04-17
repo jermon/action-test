@@ -42,39 +42,29 @@ func Perm3(a []int, i int) [][]int {
 			reminder = append(reminder, a[:i1]...)
 			reminder = append(reminder, a[i1+1:]...)
 			// fmt.Printf("V: %v, Rem: %v\n", v1, reminder)
-			
+
 			part := Perm3(reminder, i-1)
-      
+
 			for _, v2 := range part {
-    		line := make([]int, 0)
-  	  	line = append(line, v1)
+				line := make([]int, 0)
+				line = append(line, v1)
 				// fmt.Printf("## %v, %v\n", line, v2)
 				line = append(line, v2...)
 				result = append(result, line)
 			}
 
 		} else {
-  		line := make([]int, 0)
-	  	line = append(line, v1)
-  		// fmt.Printf("Ading line: %v\n",line)
-	  	result = append(result, line)
-	  }
+			line := make([]int, 0)
+			line = append(line, v1)
+			// fmt.Printf("Ading line: %v\n",line)
+			result = append(result, line)
+		}
 	}
-  // fmt.Printf("Result: %v\n",result)
+	// fmt.Printf("Result: %v\n",result)
 	return result
 }
 
-func Factorial(n int)(result int) {
-	if (n > 0) {
-		result = n * Factorial(n-1)
-		return result
-	}
-	return 1
-}
-
+// NrOfPermutations returns the number of permutations r from n.
 func NrOfPermutations(r, n int) int {
-  return Factorial(n)/Factorial(n-r)
+	return factorial(n) / factorial(n-r)
 }
-
-
-
