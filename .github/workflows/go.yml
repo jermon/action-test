@@ -26,7 +26,8 @@ jobs:
         ln -s $GITHUB_WORKSPACE $HOME/go/src/
 
     - name: Build
-      run: go build -v cmd/main/main.go 
+      run: go build -v ./...
+      # cmd/main/main.go 
 
     - name: Upload
       uses: actions/upload-artifact@v2
