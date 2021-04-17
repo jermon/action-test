@@ -1,13 +1,13 @@
 package main
 
-import(
-  "fmt"
-  c "action-test/combinatorics"
+import (
+	c "action-test"
+	"fmt"
 )
 
 func main() {
-  fmt.Println("Hello World!")
-  var a1 = []int{0, 1, 2, 3}
+	fmt.Println("Hello World!")
+	var a1 = []int{0, 1, 2, 3}
 	p1 := c.Perm2(a1)
 	fmt.Printf("Permutation1: \n%v ", p1)
 	fmt.Printf("Nr. of permutations: %v\n", len(p1))
