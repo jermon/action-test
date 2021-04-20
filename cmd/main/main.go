@@ -1,7 +1,7 @@
 package main
 
 import (
-	c "action-test"
+	c "actiontest"
 	"fmt"
 )
 
