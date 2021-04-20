@@ -1,4 +1,4 @@
-package actiontest
+package combinatorics
 
 import (
 	"fmt"

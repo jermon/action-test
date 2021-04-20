@@ -1,8 +1,9 @@
 package main
 
 import (
-	c "actiontest"
 	"fmt"
+
+	c "github.com/jermon/actiontest/combinatorics"
 )
 
 func main() {
