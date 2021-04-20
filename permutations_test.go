@@ -1,4 +1,4 @@
-package combinatorics
+package actiontest
 
 import (
 	"testing"

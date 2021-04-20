@@ -1,4 +1,4 @@
-package combinatorics
+package actiontest
 
 //import "fmt"
 
@@ -15,7 +15,7 @@ func Perm2(a []int) [][]int {
 // Permute the values at index i to len(a)-1.
 func perm2(a []int, i int) {
 	if i > len(a) {
-		// fmt.Println(a)
+		// fmt.Printgithub.com/jermon/action-testln(a)
 		b := make([]int, len(a))
 		copy(b, a)
 		permList = append(permList, b)

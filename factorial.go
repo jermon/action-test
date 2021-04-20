@@ -1,4 +1,4 @@
-package combinatorics
+package actiontest
 
 func factorial(n int) (result int) {
 	if n > 0 {
