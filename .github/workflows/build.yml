@@ -1,4 +1,4 @@
-name: Go
+name: Build
 
 on:
   push:
@@ -40,3 +40,12 @@ jobs:
 
     - name: Bench
       run: go test -bench ./...
+
+    - name: plantuml
+      id: plantuml
+      uses: grassedge/generate-plantuml-action@v1.5
+      with:
+        path: img
+        message: "Render PlantUML files"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
