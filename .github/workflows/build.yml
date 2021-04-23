@@ -30,6 +30,7 @@ jobs:
       run: go test -bench ./...
 
   build:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
 
