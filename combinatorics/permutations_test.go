@@ -1,6 +1,7 @@
 package combinatorics
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -20,29 +21,32 @@ func TestPerm(t *testing.T) {
 
 }
 
-func TestNrOfPermutations1(t *testing.T) {
-	in1, in2 := 1, 2
-	expected := 2
-	got := NrOfPermutations(in1, in2)
-	if got != expected {
-		t.Errorf("NrOfPermutations(%v,%v) = %d; want %v", in1, in2, got, expected)
-	}
-}
+func TestNrOfPermutations(t *testing.T) {
 
-func TestNrOfPermutations2(t *testing.T) {
-	in1, in2 := 2, 5
-	expected := 20
-	got := NrOfPermutations(in1, in2)
-	if got != expected {
-		t.Errorf("NrOfPermutations(%v,%v) = %d; want %v", in1, in2, got, expected)
+	tests := []struct {
+		n      int
+		r      int
+		output int
+	}{
+		{1, 1, 1},
+		{2, 1, 2},
+		{3, 1, 3},
+		{4, 1, 4},
+		{2, 2, 2},
+		{3, 2, 6},
+		{4, 2, 12},
+		{3, 3, 6},
+		{4, 3, 24},
+		{4, 4, 24},
+		{5, 2, 20},
+		{6, 3, 120},
 	}
-}
 
-func TestNrOfPermutations3(t *testing.T) {
-	in1, in2 := 3, 6
-	expected := 120
-	got := NrOfPermutations(in1, in2)
-	if got != expected {
-		t.Errorf("NrOfPermutations(%v,%v) = %d; want %v", in1, in2, got, expected)
+	for i, tt := range tests {
+		t.Run(fmt.Sprintf("Test-%d", i), func(t *testing.T) {
+			if got := NrOfPermutations(tt.r, tt.n); got != tt.output {
+				t.Errorf("NrOfPermutations(%v, %v) = %d; want %v", tt.r, tt.n, got, tt.output)
+			}
+		})
 	}
 }
