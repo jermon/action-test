@@ -51,8 +51,8 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        name: actiontest
-        path: actiontest
+        name: main
+        path: main
 
     - name: plantuml
       id: plantuml
